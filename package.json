@@ -1,8 +1,8 @@
 {
-  "name": "react-native-template-vora",
+  "name": "react-native-template",
   "version": "0.0.1",
   "description": "React Native Starter Kit from Ascendum",
-  "repository": "https://github.com/vora/react-native-template-vora.git",
+  "repository": "https://github.com/vora/react-native-template.git",
   "author": "Sunny Golovine <Sunny.Avery@ascendum.com>",
   "license": "UNLICENSED"
 }
