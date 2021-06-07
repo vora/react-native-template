@@ -18,10 +18,13 @@
 - ESLint & Prettier
 - Babel Module Resolution using `babel-plugin-module-resolver`
 - React Navigation
-- Optional Redux & Redux Persist Setup (WIP)
 - Flipper Support enabled out of the box
 - Hermes on iOS and Android enabled out of the box. (See [disabling hermes](#disabling-hermes) for more info)
 - ENV support with `react-native-dotenv` (WIP)
+
+### A Note About iOS Pods
+
+One common issue with React Native projects is different developers will have different version of Ruby which will cause `Podfile.lock` to change even when there are no changes to Pods. The solution to this is to use `npx pod-install ios` instead of just running `pod install` in the iOS directory. **Please do not run `pod install` in the iOS directory**, use `npx pod-install ios` instead.
 
 ### Disabling Hermes
 
