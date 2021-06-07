@@ -1,0 +1,8 @@
+{
+  "name": "react-native-starter-kit",
+  "version": "0.0.1",
+  "description": "React Native Starter Kit from Ascendum",
+  "repository": "git@github.com:vora/react-native-starter-kit-2.git",
+  "author": "Sunny Golovine <Sunny.Avery@ascendum.com>",
+  "license": "UNLICENSED"
+}
