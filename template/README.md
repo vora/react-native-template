@@ -1,11 +1,16 @@
 ## React Native Template
 
-### Usage
+### Getting Started
 
-```bash
-npx react-native init MyApp --template https://github.com/vora/react-native-template.git
+**Pre-requisites**
 
-```
+- Make sure you have the latest NodeJS LTS Installed (v14.15.1)
+- Make sure you have Yarn installed (`npm install -g yarn`)
+
+**Running on iOS:**
+
+1. Install Pods: `npx pod-install ios`
+2. Run the Project from the terminal: `yarn ios`
 
 ### What's Included
 
