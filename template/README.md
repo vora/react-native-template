@@ -18,10 +18,10 @@
 - ESLint & Prettier
 - Babel Module Resolution using `babel-plugin-module-resolver`
 - React Navigation
-- Optional Redux & Redux Persist Setup
+- Optional Redux & Redux Persist Setup (WIP)
 - Flipper Support enabled out of the box
 - Hermes on iOS and Android enabled out of the box. (See [disabling hermes](#disabling-hermes) for more info)
-- ENV support with `react-native-dotenv`
+- ENV support with `react-native-dotenv` (WIP)
 
 ### Disabling Hermes
 
