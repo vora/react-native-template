@@ -1,7 +1,7 @@
 import React from 'react';
-import {SafeAreaView, StyleSheet, Text, View} from 'react-native';
+import { SafeAreaView, StyleSheet, Text, View } from 'react-native';
 
-const App = () => {
+export const App: React.FC = () => {
   return (
     <SafeAreaView>
       <View style={styles.container}>
@@ -23,5 +23,3 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
 });
-
-export default App;
