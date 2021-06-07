@@ -5,7 +5,6 @@ export const AboutScreen: React.FC = () => {
   return (
     <SafeAreaView>
       <View style={styles.container}>
-        <Text style={styles.text}>React Native Starter Kit</Text>
         <Text style={styles.text}>About Screen</Text>
       </View>
     </SafeAreaView>
@@ -15,8 +14,8 @@ export const AboutScreen: React.FC = () => {
 const styles = StyleSheet.create({
   container: {
     display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'center',
+    flexDirection: 'column',
+    alignItems: 'center',
   },
   text: {
     marginTop: 20,
