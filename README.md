@@ -1,6 +1,6 @@
 ## React Native Template
 
-[Template Readme]("./template/README.md")
+[Template Readme](./template/README.md)
 
 ### Usage
 
