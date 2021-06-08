@@ -5,24 +5,12 @@ Our official template for starting new React Native projects.
 ## What's Included
 
 * Typescript
-
 * ESLint & Prettier
-
 * Babel Module Resolution (using `babel-plugin-module-resolver`)
-
 * React Navigation
-
 * [Flipper](https://fbflipper.com/) Support
-
 * [Hermes](https://hermesengine.dev/) enabled on iOS and Android (to disable see  [disabling hermes](#disabling-hermes))
-
-* ENV Support (using `react-native-dotenv`)
-
-  
-
-  ---
-
-  
+* ENV Support
 
 ## Getting Started
 
@@ -46,10 +34,6 @@ Our official template for starting new React Native projects.
 
 
 
----
-
-
-
 ## Installing Pods for iOS
 
 One common pain point in building React Native applications for iOS is Cocoapods dependencies. It can be difficult to maintain the correct dependencies and lock file version across developer machines using `pod install`. To solve this problem this project uses the  [`pod-install` package](https://www.npmjs.com/package/pod-install). This tool makes sure that everyone is on the same page regarding Ruby and Cocoapods versions. Usage:
@@ -69,10 +53,6 @@ Options:
 ```bash
 $ npx pod-install ios
 ```
-
-
-
----
 
 
 
@@ -108,7 +88,17 @@ Set `enableHermes` to `false`
 
 
 
----
-
 ## Environment Variables
+
+This template ships with [react-native-dotenv](https://www.npmjs.com/package/react-native-dotenv) out of the box. By default, the module will read variables from `.env` at the root of the project and allow them to be imported from `@env`. So if you have a variable called `API_KEY` in your `.env` file, you can import it into your code like so:
+
+```js
+import { API_KEY } from '@env'
+```
+
+You will notice when importing new variables that Typescript complains. To fix the error, add the variable to `typings/env.d.ts`
+
+
+
+
 
