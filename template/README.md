@@ -11,6 +11,7 @@ Our official template for starting new React Native projects.
 * [Flipper](https://fbflipper.com/) Support
 * [Hermes](https://hermesengine.dev/) enabled on iOS and Android (to disable see  [disabling hermes](#disabling-hermes))
 * ENV Support
+* Scripts for Updating Packages, Finding Dead Code and Cleaning Temporary Files (see [keeping things clean](#keeping-things-clean))
 
 ## Getting Started
 
@@ -99,6 +100,14 @@ import { API_KEY } from '@env'
 You will notice when importing new variables that Typescript complains. To fix the error, add the variable to `typings/env.d.ts`
 
 
+
+## Keeping Things Clean
+
+This template includes several scripts that make it easier to maintain the project as it grows.
+
+* **Updating Dependencies**: Run `yarn dep-update` to check for outdated dependencies in the project. Running `yarn dep-update -u` will update the packages. This script uses [npm-check-updates](https://www.npmjs.com/package/npm-check-updates).
+* **Finding Unused Code**: Run `yarn find-deadcode` to check if there is any exported code that is not being used. **Please use with care, there will be false positives**. This script uses [ts-prune](https://github.com/nadeesha/ts-prune)
+* **Clearing Temporary Files**: Run `yarn clean-project` to clean out any temporary files related to the project. This script uses [react-native-clean-project](https://www.npmjs.com/package/react-native-clean-project)
 
 
 
