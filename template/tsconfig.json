@@ -23,6 +23,7 @@
     }
   },
   "files": ["./typings/declarations.d.ts", "./typings/env.d.ts"],
+  "include": ["./src/**/*"],
   "exclude": [
     "node_modules",
     "babel.config.js",
