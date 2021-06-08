@@ -3,6 +3,7 @@ import { SafeAreaView, StyleSheet, Text, View } from 'react-native';
 import { Header } from '~/components/Header';
 import { Button } from '~/components/Button';
 import { NavigationProp } from '~/model/Navigation';
+
 interface Props {
   navigation: NavigationProp;
 }

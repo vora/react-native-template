@@ -1,33 +1,114 @@
-## React Native Template
+# React Native Template
 
-### Getting Started
+Our official template for starting new React Native projects.
 
-**Pre-requisites**
+## What's Included
 
-- Make sure you have the latest NodeJS LTS Installed (v14.15.1)
-- Make sure you have Yarn installed (`npm install -g yarn`)
+* Typescript
 
-**Running on iOS:**
+* ESLint & Prettier
 
-1. Install Pods: `npx pod-install ios`
-2. Run the Project from the terminal: `yarn ios`
+* Babel Module Resolution (using `babel-plugin-module-resolver`)
 
-### What's Included
+* React Navigation
 
-- Typescript
-- ESLint & Prettier
-- Babel Module Resolution using `babel-plugin-module-resolver`
-- React Navigation
-- Flipper Support enabled out of the box
-- Hermes on iOS and Android enabled out of the box. (See [disabling hermes](#disabling-hermes) for more info)
-- ENV support with `react-native-dotenv` (WIP)
+* [Flipper](https://fbflipper.com/) Support
 
-### A Note About iOS Pods
+* [Hermes](https://hermesengine.dev/) enabled on iOS and Android (to disable see  [disabling hermes](#disabling-hermes))
 
-One common issue with React Native projects is different developers will have different version of Ruby which will cause `Podfile.lock` to change even when there are no changes to Pods. The solution to this is to use `npx pod-install ios` instead of just running `pod install` in the iOS directory. **Please do not run `pod install` in the iOS directory**, use `npx pod-install ios` instead.
+* ENV Support (using `react-native-dotenv`)
 
-### Disabling Hermes
+  
 
-**iOS**: In `/ios/Podfile`, in the `use_react_native` function, set `:hermes_enabled => ` to `false`
+  ---
 
-**Android**: In `/android/app/build.gradle`, set the `enableHermes` flag in `project.ext.react` to `false`
+  
+
+## Getting Started
+
+### Pre-requisites
+
+* Make sure you have the latest Node LTS Installed (v.14.15.1)
+* Make sure you have Yarn installed (`npm install -g yarn`)
+* [For Android] Install [Android Studio](https://developer.android.com/studio) and Android SDK
+* [For Debugging] Install [Flipper](https://fbflipper.com/)
+
+### Running on iOS
+
+* Install Pods using `npx pod-install ios`
+* Run the project: `yarn ios`
+* Alternatively you can open the `iOS` folder in Xcode and run that way
+
+### Running on Android
+
+* Run the project using `yarn android`
+* Alternatively, open the `android` folder in Android Studio and run that way
+
+
+
+---
+
+
+
+## Installing Pods for iOS
+
+One common pain point in building React Native applications for iOS is Cocoapods dependencies. It can be difficult to maintain the correct dependencies and lock file version across developer machines using `pod install`. To solve this problem this project uses the  [`pod-install` package](https://www.npmjs.com/package/pod-install). This tool makes sure that everyone is on the same page regarding Ruby and Cocoapods versions. Usage:
+
+```bash
+Usage: pod-install <project-directory> [options]
+
+Install pods in your project
+
+Options:
+  -V, --version      output the version number
+  --quiet            Only print errors
+  --non-interactive  Disable interactive prompts
+  -h, --help         output usage information
+```
+
+```bash
+$ npx pod-install ios
+```
+
+
+
+---
+
+
+
+## Disabling Hermes
+
+[Hemes](https://hermesengine.dev/) is a new Javascript engine developed by Facebook that is optimized for React Native applications. By default this template has Hermes enabled for both iOS and Android. 
+
+### Disabling on iOS
+
+In `ios/Podfile`, look for the following code block:
+
+```ruby
+  use_react_native!(
+    :path => config[:reactNativePath],
+    # to enable hermes on iOS, change `false` to `true` and then install pods
+    :hermes_enabled => true 
+  )
+```
+
+Set `:hermes_enabled` to `false`
+
+### Disabling on Android
+
+In `android/app/build.gradle` and look for the following code block:
+
+```groovy
+project.ext.react = [
+    enableHermes: true,  // clean and rebuild if changing
+]
+```
+
+Set `enableHermes` to `false`
+
+
+
+---
+
+## Environment Variables
+
