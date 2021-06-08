@@ -4,7 +4,10 @@ Our official template for starting new React Native projects.
 
 ## What's Included
 
+
+
 * Typescript
+* Project configured with Yarn (see [switching to NPM](#switching-to-npm) for more info)
 * ESLint & Prettier
 * Babel Module Resolution (using `babel-plugin-module-resolver`)
 * React Navigation
@@ -109,5 +112,20 @@ This template includes several scripts that make it easier to maintain the proje
 * **Finding Unused Code**: Run `yarn find-deadcode` to check if there is any exported code that is not being used. **Please use with care, there will be false positives**. This script uses [ts-prune](https://github.com/nadeesha/ts-prune)
 * **Clearing Temporary Files**: Run `yarn clean-project` to clean out any temporary files related to the project. This script uses [react-native-clean-project](https://www.npmjs.com/package/react-native-clean-project)
 
+## Switching to NPM
 
+This project uses Yarn out of the box and is the recommended package manager for React Native projects. If you would rather use NPM, you can migrate using [deyarn](https://github.com/mixmaxhq/deyarn)
 
+```bash
+npx deyarn
+```
+
+To do it manually:
+
+1. Remove `yarn.lock`
+
+2. Run `npm install` to generate a `package-lock.json`
+
+3. Check `package.json` and replace all usages of `yarn` with `npm run`
+
+   
