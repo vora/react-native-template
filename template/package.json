@@ -11,7 +11,7 @@
     "type-check": "tsc",
     "find-deadcode": "ts-prune",
     "format": "prettier --write ./src/**/*.{ts,tsx}",
-    "clean-project": "react-native-clean-project"
+    "clean-project": "react-native clean-project-auto"
   },
   "dependencies": {
     "@react-native-community/async-storage": "^1.12.1",
